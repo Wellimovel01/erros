@@ -1,0 +1,113 @@
+
+Seeders
+
+<?php
+
+namespace Database\Seeders;
+
+// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Database\Seeder;
+
+class DatabaseSeeder extends Seeder
+{
+    /**
+     * Seed the application's database.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        // \App\Models\User::factory(10)->create();
+
+        // \App\Models\User::factory()->create([
+        //     'name' => 'Test User',
+        //     'email' => 'test@example.com',
+        // ]);
+
+      Items::factory(10)->create();
+    }
+}
+
+
+
+
+
+
+// erro do terminal
+PS C:\Users\Wellington\Desktop\exemplo>  php artisan migrate:fresh --seed
+
+  Dropping all tables .................................................................................................................... 78ms DONE
+
+   INFO  Preparing database.
+
+  Creating migration table ................................................................................................................ 9ms DONE
+
+   INFO  Running migrations.
+
+  2014_10_12_000000_create_users_table ................................................................................................... 17ms DONE
+  2014_10_12_100000_create_password_resets_table ......................................................................................... 23ms DONE
+  2019_08_19_000000_create_failed_jobs_table ............................................................................................. 15ms DONE
+  2019_12_14_000001_create_personal_access_tokens_table .................................................................................. 22ms DONE
+  2023_01_14_205338_create_items_table .................................................................................................... 7ms DONE
+
+   INFO  Seeding database.
+
+
+   Error 
+
+  Class "Database\Seeders\Items" not found
+
+  at C:\Users\Wellington\Desktop\exemplo\database\seeders\DatabaseSeeder.php:24
+     20▕         //     'name' => 'Test User',
+     21▕         //     'email' => 'test@example.com',
+     22▕         // ]);
+     23▕
+  ➜  24▕       Items::factory('10')->create();
+     25▕     }
+     26▕ }
+     27▕
+
+  1   C:\Users\Wellington\Desktop\exemplo\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:36
+      Database\Seeders\DatabaseSeeder::run()
+
+  2   C:\Users\Wellington\Desktop\exemplo\vendor\laravel\framework\src\Illuminate\Container\Util.php:41
+      Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+PS C:\Users\Wellington\Desktop\exemplo>  php artisan migrate:fresh --seed
+
+  Dropping all tables .................................................................................................................... 92ms DONE
+
+   INFO  Preparing database.
+
+  Creating migration table ................................................................................................................ 9ms DONE
+
+   INFO  Running migrations.  
+
+  2014_10_12_000000_create_users_table ................................................................................................... 18ms DONE
+  2014_10_12_100000_create_password_resets_table ......................................................................................... 23ms DONE
+  2019_08_19_000000_create_failed_jobs_table ............................................................................................. 15ms DONE
+  2019_12_14_000001_create_personal_access_tokens_table .................................................................................. 21ms DONE
+  2023_01_14_205338_create_items_table .................................................................................................... 7ms DONE
+
+   INFO  Seeding database.
+
+
+   Error 
+
+  Class "Database\Seeders\Items" not found
+
+  at C:\Users\Wellington\Desktop\exemplo\database\seeders\DatabaseSeeder.php:24
+     20▕         //     'name' => 'Test User',
+     21▕         //     'email' => 'test@example.com',
+     22▕         // ]);
+     23▕
+  ➜  24▕       Items::factory(10)->create();
+     25▕     }
+     26▕ }
+     27▕
+
+  1   C:\Users\Wellington\Desktop\exemplo\vendor\laravel\framework\src\Illuminate\Container\BoundMethod.php:36
+      Database\Seeders\DatabaseSeeder::run()
+
+  2   C:\Users\Wellington\Desktop\exemplo\vendor\laravel\framework\src\Illuminate\Container\Util.php:41
+      Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+PS C:\Users\Wellington\Desktop\exemplo> 
